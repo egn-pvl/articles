@@ -1,0 +1,6 @@
+﻿services:
+  articles:
+    image: articles
+    build:
+      context: .
+      dockerfile: Articles/Dockerfile
