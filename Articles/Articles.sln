@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles", "Articles\Articles.csproj", "{CEDA790B-23DA-4628-8A59-D25065023DB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.Api", "Articles.Api\Articles.Api.csproj", "{CEDA790B-23DA-4628-8A59-D25065023DB3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8CB71AB-9439-4D10-8C8F-0DE512CC0A4E}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.Domain", "Articles.Domain\Articles.Domain.csproj", "{8B807B4D-5774-4316-A00A-0651EC9690B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.Application", "Articles.Application\Articles.Application.csproj", "{96429199-D364-4375-94BA-47B27000CED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4CCD3B3A-7F89-425C-92FD-63BD3C4C3FA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +23,17 @@ Global
 		{CEDA790B-23DA-4628-8A59-D25065023DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEDA790B-23DA-4628-8A59-D25065023DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEDA790B-23DA-4628-8A59-D25065023DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B807B4D-5774-4316-A00A-0651EC9690B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B807B4D-5774-4316-A00A-0651EC9690B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B807B4D-5774-4316-A00A-0651EC9690B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B807B4D-5774-4316-A00A-0651EC9690B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96429199-D364-4375-94BA-47B27000CED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96429199-D364-4375-94BA-47B27000CED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96429199-D364-4375-94BA-47B27000CED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96429199-D364-4375-94BA-47B27000CED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CCD3B3A-7F89-425C-92FD-63BD3C4C3FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCD3B3A-7F89-425C-92FD-63BD3C4C3FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCD3B3A-7F89-425C-92FD-63BD3C4C3FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCD3B3A-7F89-425C-92FD-63BD3C4C3FA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,2 @@
+# Если скрипт не запускается, выполнить строку "Set-ExecutionPolicy RemoteSigned -Scope Process" в консоли
+Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
