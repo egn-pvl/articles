@@ -4,3 +4,26 @@
     build:
       context: .
       dockerfile: Articles/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Host=db;Port=5432;Database=articles;Username=postgres;Password=rw_pwd
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"  # публичный доступ к приложению
+    restart: unless-stopped
+  
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: articles
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rw_pwd
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  pgdata: {}

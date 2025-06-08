@@ -17,6 +17,7 @@ public class ArticleController : AppController
 {
     private readonly IArticleService _articleService;
 
+    /// <inheritdoc />
     public ArticleController(IArticleService articleService)
     {
         _articleService = articleService;

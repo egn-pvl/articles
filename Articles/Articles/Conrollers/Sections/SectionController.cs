@@ -15,6 +15,7 @@ public class SectionController : AppController
 {
     private readonly ISectionService _sectionService;
 
+    /// <inheritdoc />
     public SectionController(ISectionService sectionService)
     {
         _sectionService = sectionService;
