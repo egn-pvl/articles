@@ -23,26 +23,32 @@ public record Section : ValueObject
     /// <summary>
     /// Название
     /// </summary>
-    public string Name => string.Join(',', Tags.Select(static el => el.Value))[..MaxNameLength];
-    
+    public string Name { get; private init; }
+
     /// <summary>
     /// Список тэгов
     /// </summary>
     public SortedSet<Tag> Tags { get; private init; }
-    
-    /// <summary>
-    /// Количество статей в разделе
-    /// </summary>
-    public int ArticlesCount { get; private init; }
 
     /// <summary>
     /// ctor
     /// </summary>
-    public Section(IEnumerable<Tag> tags, int articlesCount)
+    public Section(IEnumerable<Tag> tags)
     {
-        Tags = new(tags);
-        ArticlesCount = articlesCount;
+        Tags = new(tags.Distinct());
+        Name = GenerateName();
         SectionId = GenerateSectionId();
+    }
+
+    private string GenerateName()
+    {
+        var joined = string.Join(',', Tags.Select(static el => el.Value));
+        if (joined.Length > MaxNameLength)
+        {
+            return joined[..MaxNameLength];
+        }
+
+        return joined;
     }
 
     /// <summary>

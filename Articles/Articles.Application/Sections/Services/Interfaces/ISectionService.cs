@@ -9,9 +9,9 @@ namespace Articles.Application.Sections.Services.Interfaces;
 public interface ISectionService
 {
     /// <summary>
-    /// Получить список всех разделов
+    /// Получить статистику по всем разделам
     /// </summary>
-    Task<IEnumerable<Section>> GetAllAsync();
+    Task<IEnumerable<SectionStats>> GetStatsForAllAsync();
 
     /// <summary>
     /// Получить список статей раздела

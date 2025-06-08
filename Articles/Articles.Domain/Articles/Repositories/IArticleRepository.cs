@@ -8,8 +8,11 @@ namespace Articles.Domain.Articles.Repositories;
 public interface IArticleRepository : IRepository
 {
     /// <summary>
-    /// Создать новую статью
+    /// Сохранить статью
     /// </summary>
+    /// <remarks>
+    /// Если не найдена по ID - будет создана новая. Если найдена - будет обновлена
+    /// </remarks>
     public Task CreateAsync(Article article);
     
     /// <summary>
@@ -18,9 +21,9 @@ public interface IArticleRepository : IRepository
     public Task<Article> GetAsync(Guid articleId);
 
     /// <summary>
-    /// Изменить статью
+    /// Обновить статью
     /// </summary>
-    public Task UpdateAsync(Article command);
+    public Task UpdateAsync(Article article);
 
     /// <summary>
     /// Удалить статью

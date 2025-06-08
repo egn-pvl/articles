@@ -41,7 +41,7 @@ public class Article : Entity<Guid>
     /// </summary>
     public Article(ArticleName name, IEnumerable<Tag> tags)
     {
-        var tagsArray = tags.ToArray();
+        var tagsArray = tags.Distinct().ToArray();
         
         CheckTagsCount(tagsArray.Length);
         
@@ -72,7 +72,7 @@ public class Article : Entity<Guid>
     /// </summary>
     public void Update(ArticleName? name, IEnumerable<Tag>? tags)
     {
-        var tagsArray = tags?.ToArray();
+        var tagsArray = tags?.Distinct().ToArray();
         
         if (tagsArray != null)
         {

@@ -9,9 +9,9 @@ namespace Articles.Domain.Sections.Repositories
     public interface ISectionRepository : IRepository
     {
         /// <summary>
-        /// Получить список всех разделов
+        /// Получить статистику по всем разделам
         /// </summary>
-        Task<IEnumerable<Section>> GetAllAsync();
+        Task<IEnumerable<SectionStats>> GetStatsForAllAsync();
 
         /// <summary>
         /// Получить список статей раздела

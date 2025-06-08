@@ -16,9 +16,9 @@ public class SectionService : ISectionService
     }
 
     /// <inheritdoc />
-    public async Task<IEnumerable<Section>> GetAllAsync()
+    public async Task<IEnumerable<SectionStats>> GetStatsForAllAsync()
     {
-        return await _sectionRepository.GetAllAsync();
+        return await _sectionRepository.GetStatsForAllAsync();
     }
 
     /// <inheritdoc />

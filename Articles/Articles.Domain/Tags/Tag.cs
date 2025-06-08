@@ -6,7 +6,7 @@ namespace Articles.Domain.Tags;
 /// <summary>
 /// Тэг
 /// </summary>
-public record Tag : SimpleValueObject<Tag, string>
+public record Tag : SimpleValueObject<Tag, string>, IComparable<Tag>
 {
     /// <summary>
     /// Максимальное количество символов
@@ -24,5 +24,16 @@ public record Tag : SimpleValueObject<Tag, string>
         {
             throw new IncorrectValueException(this, value, $"max length is {MaxLength} characters");
         }
+    }
+
+    /// <inheritdoc />
+    public int CompareTo(Tag? other)
+    {
+        if (other is null)
+        {
+            return 1;
+        }
+
+        return string.Compare(Value, other.Value, StringComparison.InvariantCulture);
     }
 }

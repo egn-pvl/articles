@@ -28,7 +28,7 @@ public record ArticleResponse
     /// <summary>
     /// Дата и время изменения
     /// </summary>
-    [JsonPropertyName("ureatedAt")]
+    [JsonPropertyName("updatedAt")]
     public required DateTimeOffset? UpdatedAt { get; init; }
     
     /// <summary>

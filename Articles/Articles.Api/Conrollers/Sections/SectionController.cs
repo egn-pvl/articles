@@ -27,7 +27,7 @@ public class SectionController : AppController
     [ProducesResponseType<IEnumerable<SectionResponse>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAsync()
     {
-        var sections = await _sectionService.GetAllAsync();
+        var sections = await _sectionService.GetStatsForAllAsync();
         var response = sections
             .OrderByDescending(static el => el.ArticlesCount)
             .Select(static el => new SectionResponse

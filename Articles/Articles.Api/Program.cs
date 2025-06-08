@@ -21,9 +21,11 @@ class Program
         
         builder.Services
             .AddApplication()
-            .AddDal();
+            .AddDal(builder.Configuration);
         
         var app = builder.Build();
+        
+        app.Services.MigrateDatabase(app.Configuration);
 
         app.MapControllers();
 

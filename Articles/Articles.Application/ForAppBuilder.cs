@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Articles.Application;
 
-public static class DependencyInjection
+public static class ForAppBuilder
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
