@@ -1,4 +1,5 @@
-using Articles.Domain.Tags.ValueObjects;
+using Articles.Domain.Articles.ValueObjects;
+using Articles.Domain.Tags;
 
 namespace Articles.Application.Articles.Commands
 {
@@ -18,7 +19,7 @@ namespace Articles.Application.Articles.Commands
         /// <remarks>
         /// Если null - изменено не будет
         /// </remarks>
-        public required string? Name { get; init; }
+        public required ArticleName? Name { get; init; }
     
         /// <summary>
         /// Новый список тэгов
@@ -26,6 +27,6 @@ namespace Articles.Application.Articles.Commands
         /// <remarks>
         /// Если null - изменено не будет
         /// </remarks>
-        public required Tag[]? Tags { get; init; }
+        public required IEnumerable<Tag>? Tags { get; init; }
     }
 }

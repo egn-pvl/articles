@@ -1,9 +1,9 @@
 using System.Security.Cryptography;
 using System.Text;
-using Articles.Domain.Tags.ValueObjects;
+using Articles.Domain.Tags;
 using Core.BaseTypes;
 
-namespace Articles.Domain.Sections.ValueObjects;
+namespace Articles.Domain.Sections;
 
 /// <summary>
 /// Раздел
@@ -16,14 +16,14 @@ public record Section : ValueObject
     public const int MaxNameLength = 1024;
     
     /// <summary>
-    /// ID секции
+    /// ID раздела
     /// </summary>
     public string SectionId { get; private init; }
 
     /// <summary>
     /// Название
     /// </summary>
-    public string Name => string.Join(',', Tags.Select(static el => el.Name))[..MaxNameLength];
+    public string Name => string.Join(',', Tags.Select(static el => el.Value))[..MaxNameLength];
     
     /// <summary>
     /// Список тэгов
@@ -46,7 +46,7 @@ public record Section : ValueObject
     }
 
     /// <summary>
-    /// Сгенерировать ID секции
+    /// Сгенерировать ID раздела
     /// </summary>
     private string GenerateSectionId()
     {

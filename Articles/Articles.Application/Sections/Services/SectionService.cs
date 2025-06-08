@@ -1,7 +1,7 @@
 using Articles.Application.Sections.Services.Interfaces;
 using Articles.Domain.Articles;
+using Articles.Domain.Sections;
 using Articles.Domain.Sections.Repositories;
-using Articles.Domain.Sections.ValueObjects;
 
 namespace Articles.Application.Sections.Services;
 

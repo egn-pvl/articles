@@ -1,5 +1,5 @@
 using Articles.Domain.Articles;
-using Articles.Domain.Sections.ValueObjects;
+using Articles.Domain.Sections;
 
 namespace Articles.Application.Sections.Services.Interfaces;
 

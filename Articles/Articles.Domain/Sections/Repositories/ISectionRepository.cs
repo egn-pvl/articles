@@ -1,5 +1,4 @@
 using Articles.Domain.Articles;
-using Articles.Domain.Sections.ValueObjects;
 using Core.Interfaces;
 
 namespace Articles.Domain.Sections.Repositories

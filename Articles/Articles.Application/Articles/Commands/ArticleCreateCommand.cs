@@ -1,4 +1,5 @@
-using Articles.Domain.Tags.ValueObjects;
+using Articles.Domain.Articles.ValueObjects;
+using Articles.Domain.Tags;
 
 namespace Articles.Application.Articles.Commands
 {
@@ -10,11 +11,11 @@ namespace Articles.Application.Articles.Commands
         /// <summary>
         /// Название
         /// </summary>
-        public required string Name { get; init; }
+        public required ArticleName Name { get; init; }
     
         /// <summary>
         /// Список тэгов
         /// </summary>
-        public required Tag[] Tags { get; init; }
+        public required IEnumerable<Tag> Tags { get; init; }
     }
 }

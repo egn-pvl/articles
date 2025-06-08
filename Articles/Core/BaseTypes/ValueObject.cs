@@ -1,6 +1,6 @@
 namespace Core.BaseTypes;
 
 /// <summary>
-/// Базовый ValueObject приложение
+/// Базовый ValueObject
 /// </summary>
-public record ValueObject();
+public abstract record ValueObject;
